@@ -1,0 +1,59 @@
+//Base Colors
+$bg:#f1f3f3; // bg
+$text:#303232; // title and border
+$title:#1e3674; // text and icon
+$alternative:#ce3d57;
+//Colors
+$blue: #007bff;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+$white: #fff;
+$gray: #a9a9a9;
+$gray-dark: #3c3c3c;
+$primary: #434343;
+$secondary: #a9a9a9;
+$success: #0c9;
+$info: #19b5fe;
+$warning: #f7bc06;
+$danger: #f2545b;
+$light: #f9f9f9;
+$dark: #3f3f3f;
+$breakpoint-xs: 0;
+$breakpoint-xsm: 420px;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1600px;
+$breakpoint-xxxl: 1900px;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  background-color: $bg;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+}
