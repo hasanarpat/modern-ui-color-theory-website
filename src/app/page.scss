@@ -2,15 +2,18 @@
 
 @keyframes float {
   0% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(5px 5px 5px #fff);
+    filter: drop-shadow(5px 5px 5px #fff);
     transform: translatey(0px);
   }
   50% {
-    box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+    -webkit-filter: drop-shadow(5px 5px 5px #fff);
+    filter: drop-shadow(5px 5px 5px #fff);
     transform: translatey(-20px);
   }
   100% {
-    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    -webkit-filter: drop-shadow(5px 5px 5px #fff);
+    filter: drop-shadow(5px 5px 5px #fff);
     transform: translatey(0px);
   }
 }
@@ -26,8 +29,7 @@
 
 .main {
   min-height: calc(100dvh - 6rem);
-  background: #000;
-
+  background: linear-gradient(to left,#b6aec7, globals.$purple, #817daa);
   .hero {
     min-height: calc(100dvh - 6rem);
     color: globals.$alternative;
@@ -39,6 +41,8 @@
 
     @media (max-width:globals.$breakpoint-md) {
       flex-direction: column;
+      padding: 4rem;
+      gap: 4rem;
       
     }
     @media (min-width:globals.$breakpoint-xl) {
@@ -51,19 +55,29 @@
       display: flex;
       flex-direction: column;
       gap: 1rem;
+      @media (max-width:globals.$breakpoint-md) {
+        gap: 2rem;
+        align-items: center;
+      }
 
       &__title {
         font-size: 3.5rem;
         line-height: 3.5rem;
         margin-bottom: 2rem;
-        text-align: center;
+        text-align: start;@media (max-width:globals.$breakpoint-md) {
+          text-align: center;
+        }
       }
 
       &__desc {
-        color: globals.$gray;
+        color: globals.$light;
         font-size: 1.2rem;
-        line-height: 1.5rem;
+        line-height: 2rem;
         text-align: justify;
+        @media (max-width:globals.$breakpoint-md) {
+          text-align: center;
+          font-size: 1rem;
+        }
       }
 
       &__button {
@@ -81,7 +95,7 @@
 
         &:hover,&:focus{
           &::before{
-            content: 'Learn More';
+            content: '🚀';
             display: flex;
             align-items: center;
             justify-content: center;
@@ -90,9 +104,11 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: globals.$title;
+            background: globals.$purple;
             border-radius: 3rem;
-            animation: button .7s ease-out;
+            animation: button .7s ease-in;
+            font-size: 1rem;
+            font-weight: 900;
           }
         }
       }

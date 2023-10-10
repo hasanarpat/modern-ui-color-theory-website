@@ -29,7 +29,7 @@ $ts: all 0.4s backwards;
   height: 6rem;
   padding: 1.5rem;
   color: globals.$text;
-  background: globals.$title;
+  background: globals.$purple;
   color: globals.$white;
 
   &__container {
@@ -105,10 +105,22 @@ $ts: all 0.4s backwards;
       animation: slidein 1s 0.4s backwards;
       z-index: 9;
 
+      .bg {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+      }
       .cube {
+        -webkit-filter: drop-shadow(5px 5px 5px #fff);
+        filter: drop-shadow(5px 5px 5px #fff);
+        z-index: 11;
         &:hover {
-          transition: all .5 linear;
+          transition: all 0.5 linear;
           transform: rotate(90deg) scale(1.1);
+          cursor: pointer;
         }
       }
 
@@ -117,10 +129,10 @@ $ts: all 0.4s backwards;
         color: globals.$white;
         top: 4.2rem;
         right: -1.5rem;
-        
-          @media (max-width: globals.$breakpoint-md) {
-            width: globals.$breakpoint-xsm;
-          }
+
+        @media (max-width: globals.$breakpoint-md) {
+          width: globals.$breakpoint-xsm;
+        }
         width: 24rem;
         .menu__list {
           display: flex;
@@ -135,13 +147,15 @@ $ts: all 0.4s backwards;
           .menu_list_item {
             width: 100%;
             padding: 2rem 1rem 2rem 0.5rem;
-            border-left: 4px solid globals.$alternative;
+            border-left: 4px solid globals.$white;
             transition: all 0.2s ease;
-            background: globals.$title;
+            background: globals.$purple;
 
             &:hover {
-              border-left: 12px solid globals.$alternative;
-              background: #425fa8;
+              border-left: 12px solid globals.$light;
+              border-top-left-radius: 12px;
+              border-bottom-left-radius: 12px;
+              background: #a150cf;
               color: globals.$white;
               font-size: 1.01rem;
             }
